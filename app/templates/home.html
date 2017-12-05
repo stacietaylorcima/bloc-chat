@@ -1,1 +1,7 @@
-<h1>Home Page</h1>
+<div ng-controller="HomeCtrl as home">
+  <h1>Home Page</h1>
+
+<!-- Need sidebar navigation to each chatroom. Display the rooms in the template using ng-repeat -->
+  <div class="sidebar" ng-repeat="room in home.chatrooms"></div>
+
+</div>
