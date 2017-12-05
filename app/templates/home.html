@@ -2,6 +2,8 @@
   <h1>Home Page</h1>
 
 <!-- Need sidebar navigation to each chatroom. Display the rooms in the template using ng-repeat -->
-  <div class="sidebar" ng-repeat="room in home.chatrooms"></div>
-
-</div>
+  <div class="sidebar"></div>
+    <ul class="chatrooms">
+      <li ng-repeat="room in home.chatrooms">{{ room.name }}</li>
+    </ul>
+  </div>
