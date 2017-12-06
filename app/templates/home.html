@@ -1,9 +1,9 @@
 <div ng-controller="HomeCtrl as home">
-  <h1>Home Page</h1>
-
-<!-- Need sidebar navigation to each chatroom. Display the rooms in the template using ng-repeat -->
-  <div class="sidebar"></div>
-    <ul class="chatrooms">
-      <li ng-repeat="room in home.chatrooms">{{ room.$value }}</li>
-    </ul>
+  <!-- Need sidebar navigation to each chatroom. Display the rooms in the template using ng-repeat -->
+  <div class="sidebar">
+    <h1>Bloc Chat</h1>
+      <ul class="chatrooms">
+        <li ng-repeat="room in home.chatrooms">{{ room.$value }}</li>
+      </ul>
+    </div>
   </div>

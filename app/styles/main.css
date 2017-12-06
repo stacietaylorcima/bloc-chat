@@ -17,7 +17,7 @@ h1 {
 
 /*Sidebar*/
 .sidebar {
-    /*position: fixed;*/
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 20%;
