@@ -1,3 +1,11 @@
+<section>
+  <!-- Reference the ModalCtrl from this button to call the open() method that will open the actual modal. -->
+  <div ng-controller='ModalCtrl as modals'>
+    <button type="button" class="btn btn-default" ng-click="modals.open()">New Chatroom</button>
+  </div>
+</section>
+
+
 <div ng-controller="HomeCtrl as home">
   <!-- Need sidebar navigation to each chatroom. Display the rooms in the template using ng-repeat -->
   <div class="sidebar">
