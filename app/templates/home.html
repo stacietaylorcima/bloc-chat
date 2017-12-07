@@ -1,17 +1,15 @@
 <section>
   <!-- Reference the ModalCtrl from this button to call the open() method that will open the actual modal. -->
-  <div ng-controller='ModalCtrl as modals'>
-    <button type="button" class="btn btn-default" ng-click="modals.open()">New Chatroom</button>
-  </div>
-</section>
+<div class="sidebar">
 
-
-<div ng-controller="HomeCtrl as home">
-  <!-- Need sidebar navigation to each chatroom. Display the rooms in the template using ng-repeat -->
-  <div class="sidebar">
-    <h1>Bloc Chat</h1>
-      <ul class="chatrooms">
-        <li ng-repeat="room in home.chatrooms">{{ room.$value }}</li>
-      </ul>
+      <h1>Bloc Chat</h1>
+      <div ng-controller='ModalCtrl as modals'>
+        <button type="button" class="btn btn-default" ng-click="modals.open()">New Room</button>
+      </div>
+      <div ng-controller="HomeCtrl as home">
+        <ul class="chatrooms">
+          <li ng-repeat="room in home.chatrooms">{{ room.$value }}</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>

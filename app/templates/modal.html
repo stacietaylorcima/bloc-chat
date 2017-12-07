@@ -2,12 +2,16 @@
 When the cancel button is clicked within this modal, the cancel() method is triggered in the ModalInstanceCtrl. -->
 <div>
   <div class="modal-header">
-    <h2 class="modal-title">Modal Title</h2>
+    <h2 class="modal-title">Create a New Chatroom</h2>
   </div>
-    <div class="modal-body">
-      <p>This is a modal body.</p>
-    </div>
-    <div class="modal-footer">
-      <button class="btn btn-warning" type="button" ng-click="modalInstance.cancel()">Cancel</button>
-    </div>
+  <div class="modal-body">
+    <p>Name</p>
+    <form name="create-chatroom" ng-submit="modalInstance.ok()">
+      <input class="form-control" ng-model="modalInstance.quote" title="chatroom" placeholder="Name your chatroom" autofocus />
+    </form>
+  </div>
+  <div class="modal-footer">
+    <!-- <button class="btn btn-primary" type="button" ng-click="modalInstance.create()">Create</button> -->
+    <button class="btn btn-warning" type="button" ng-click="modalInstance.cancel()">Cancel</button>
+  </div>
 </div>
