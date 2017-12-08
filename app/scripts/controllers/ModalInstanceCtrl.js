@@ -6,10 +6,10 @@
     this.cancel = function() {
       $uibModalInstance.dismiss('dismiss')
     }
-    // This function uses the uibModalInstance.close to submit the new information (the parameter is this.chatrooms = Room.all on HomeCtrl) and close the modal.
-    // this.create = function() {
-    //         $uibModalInstance.close(this.chatroom)
-    // }
+    // This function uses the uibModalInstance.close to submit the new information (the parameter is this.room = Room.all on HomeCtrl) and close the modal.
+    this.create = function() {
+            $uibModalInstance.close(this.room)
+    }
   }
 
   angular
