@@ -1,17 +1,19 @@
-<!-- This template (modal.html) is connected to the ModalInstanceCtrl.
-When the cancel button is clicked within this modal, the cancel() method is triggered in the ModalInstanceCtrl. -->
+<!-- This template (modal.html) is triggered by ModalCtrl when the user clicks the New Room' button on home.html.  -->
+<!-- Once this view is enabled, ModalInstanceCtrl controller takes over to connect this view to the model --> 
 <div>
   <div class="modal-header">
-    <h2 class="modal-title">Create a New Chatroom</h2>
+    <h2 class="modal-title">Create New Room</h2>
   </div>
   <div class="modal-body">
     <p>Name</p>
-    <form name="create-chatroom" ng-submit="modalInstance.ok()">
-      <input class="form-control" ng-model="modalInstance.quote" title="chatroom" placeholder="Name your chatroom" autofocus />
-    </form>
+    <!-- <form name="create-chatroom" ng-submit="modalInstance.ok()">
+      <input class="form-control" ng-model="modalInstance.room" title="chatroom" placeholder="Enter a room name" autofocus />
+    </form> -->
   </div>
   <div class="modal-footer">
-    <!-- <button class="btn btn-primary" type="button" ng-click="modalInstance.create()">Create</button> -->
+    <!-- When this 'create' button is clicked within this modal, the ___() method is triggered in the ___Ctrl. -->
+    <!-- <button class="btn btn-primary" type="button" ng-click="modalInstance.create()">Create room</button> -->
+    <!-- When this 'cancel' button is clicked within this modal, the cancel() method is triggered in the ModalInstanceCtrl. -->
     <button class="btn btn-warning" type="button" ng-click="modalInstance.cancel()">Cancel</button>
   </div>
 </div>

@@ -1,15 +1,18 @@
 <section>
-  <!-- Reference the ModalCtrl from this button to call the open() method that will open the actual modal. -->
-<div class="sidebar">
-
-      <h1>Bloc Chat</h1>
-      <div ng-controller='ModalCtrl as modals'>
-        <button type="button" class="btn btn-default" ng-click="modals.open()">New Room</button>
-      </div>
-      <div ng-controller="HomeCtrl as home">
-        <ul class="chatrooms">
-          <li ng-repeat="room in home.chatrooms">{{ room.$value }}</li>
-        </ul>
-      </div>
+  <div class="sidebar">
+    <h1>Bloc Chat</h1>
+      <!-- New room button -->
+      <!-- Need to reference ModalCtrl here because it is listening for a click on the 'New room' button.  -->
+      <!-- When the 'New room' button is clicked, ModalCtrl calls the open() method on ModalCtrl which uses $uibModal services open() method to open the actual modal view (modal.html) -->
+    <div ng-controller='ModalCtrl as modals'>
+      <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
     </div>
-  </section>
+
+    <!-- List of rooms -->
+    <div ng-controller="HomeCtrl as home">
+      <ul class="chatrooms">
+        <li ng-repeat="room in home.chatrooms">{{ room.$value }}</li>
+      </ul>
+    </div>
+  </div>
+</section>

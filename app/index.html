@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css">
 </head>
 <body>
 
     <ui-view></ui-view>
 
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!-- AngularUI Router -->
@@ -17,25 +21,27 @@
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-      <!-- Initialize FireBase -->
-      <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
-      <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyDxL18JuLPvySJxCbyUxK7_oIYvnSefSvA",
-          authDomain: "bloc-chat-stc.firebaseapp.com",
-          databaseURL: "https://bloc-chat-stc.firebaseio.com",
-          projectId: "bloc-chat-stc",
-          storageBucket: "bloc-chat-stc.appspot.com",
-          messagingSenderId: "284901027345"
-        };
-        firebase.initializeApp(config);
-      </script>
-      <!-- AngularUI Bootstrap -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+    <!-- Initialize FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDxL18JuLPvySJxCbyUxK7_oIYvnSefSvA",
+        authDomain: "bloc-chat-stc.firebaseapp.com",
+        databaseURL: "https://bloc-chat-stc.firebaseio.com",
+        projectId: "bloc-chat-stc",
+        storageBucket: "bloc-chat-stc.appspot.com",
+        messagingSenderId: "284901027345"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- AngularUI Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <!-- Application Files -->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
     <script src="/scripts/services/Room.js"></script>
 
 </body>
