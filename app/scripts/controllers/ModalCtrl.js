@@ -3,7 +3,6 @@
   // Once the user clicks to open the modal from the view, this controller reaches out to the $uibModal service and calls the open() method, passing optional values to it in a JS object.
 
   // modalInstance uses the $uibModal service to open the modal and links the modal.html template to the ModalInstanceCtrl
-  // Note from Carrie: in the future, we'll need to do something with this modalInstance variable in the ModalCtrl, but for now, we won't be doing anything with it.
   function ModalCtrl($uibModal, Room) {
     this.open = function() {
       var modalInstance = $uibModal.open({
@@ -12,10 +11,10 @@
       })
 
       console.log('modal opened')
-
+// Notes about promise handler: modalInstance is waiting for user to submit an event (result - promise object) then (promise handler) once the result is submitted, execute callback
     modalInstance.result.then(function(room) {
       Room.add(room)
-      console.log(Room.all)
+      console.log(room)
       })
     }
   }

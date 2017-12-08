@@ -7,8 +7,9 @@
       $uibModalInstance.dismiss('dismiss')
     }
     // This function uses the uibModalInstance.close to submit the new information (the parameter is this.room = Room.all on HomeCtrl) and close the modal.
-    this.create = function() {
+    this.ok = function(roomName) {
             $uibModalInstance.close(this.room)
+            console.log(roomName)
     }
   }
 

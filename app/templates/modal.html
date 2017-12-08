@@ -6,14 +6,14 @@
   </div>
   <div class="modal-body">
     <p>Enter a room name</p>
-    <form name="create-room" ng-submit="modalInstance.create()">
+    <form name="create-room" ng-submit="modalInstance.ok(modalInstance.room)">
       <input class="form-control" ng-model="modalInstance.room" title="room" placeholder="name" autofocus />
       <h3>{{modalInstance.room}}
     </form>
   </div>
   <div class="modal-footer">
     <!-- When this 'create' button is clicked within this modal, the ___() method is triggered in the ___Ctrl. -->
-    <button class="btn btn-primary" type="button" ng-click="modalInstance.create()">Create room</button>
+    <button class="btn btn-primary" type="button" ng-click="modalInstance.ok(modalInstance.room)">Create room</button>
     <!-- When this 'cancel' button is clicked within this modal, the cancel() method is triggered in the ModalInstanceCtrl. -->
     <button class="btn btn-warning" type="button" ng-click="modalInstance.cancel()">Cancel</button>
   </div>
