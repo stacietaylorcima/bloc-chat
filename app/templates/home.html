@@ -1,11 +1,16 @@
 <section class="sidebar">
-  <h1>Bloc Chat</h1>
+  <h1> Bloc Chat
+
     <!-- New room button -->
     <!-- Need to reference ModalCtrl here because it is listening for a click on the 'New room' button.  -->
     <!-- When the 'New room' button is clicked, ModalCtrl calls the open() method on ModalCtrl which uses $uibModal services open() method to open the actual modal view (modal.html) -->
-  <div ng-controller='ModalCtrl as modals'>
-    <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
-  </div>
+    <span class="btn-default>"
+      <div ng-controller='ModalCtrl as modals'>
+        <button type="button" ng-click="modals.open()">New room</button>
+      </div>
+    </span>
+  </h1>
+
 
   <!-- List of rooms -->
   <div>
