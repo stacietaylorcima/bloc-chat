@@ -1,3 +1,4 @@
+/*General styles*/
 
 html {
     font-size: 100%;
@@ -15,15 +16,15 @@ h1 {
   color: #4A4A4A;
 }
 
-h1 btn-default {
+/*Sidebar*/
+.new-room-button {
   margin: 10px;
   padding: 5px;
   display: inline-block;
 }
 
-/*Sidebar*/
 .sidebar {
-    position: fixed;
+    float: left;
     top: 0px;
     left: 0px;
     width: 20%;
@@ -35,4 +36,11 @@ h1 btn-default {
     list-style-type: none;
     margin: 5px;
     color: #9A9B9C;
+}
+
+/*Chatroom Section*/
+
+.chatroom-section{
+  float: right;
+  width: 75%;
 }

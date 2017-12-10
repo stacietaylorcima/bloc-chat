@@ -2,7 +2,14 @@
 (function(){
   // Inject the Room service so that you can assign the array of objects retrieved by the all method to a $scope variable.
   function HomeCtrl(Room){
-    this.room = Room.all;
+    var home = this;
+    home.room = Room.all;
+    home.currentRoom = null;
+
+    home.setCurrentRoom = function (room) {
+      home.currentRoom = room;
+      console.log(home.currentRoom.$value);
+    }
   }
 
   angular

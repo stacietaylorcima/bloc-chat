@@ -1,21 +1,22 @@
-<section class="sidebar">
-  <h1> Bloc Chat
-
+<!-- Sidebar: includes 'Bloc Chat' header, new room button, and list of rooms -->
+<section class='sidebar'>
+  <h1>Bloc Chat</h1>
     <!-- New room button -->
     <!-- Need to reference ModalCtrl here because it is listening for a click on the 'New room' button.  -->
     <!-- When the 'New room' button is clicked, ModalCtrl calls the open() method on ModalCtrl which uses $uibModal services open() method to open the actual modal view (modal.html) -->
-    <span class="btn-default>"
-      <div ng-controller='ModalCtrl as modals'>
-        <button type="button" ng-click="modals.open()">New room</button>
-      </div>
+    <span ng-controller='ModalCtrl as modals'>
+      <button class='new-room-button' type='button' ng-click='modals.open()'>New room</button>
     </span>
-  </h1>
+    <!-- List of rooms -->
+    <div class="room-list">
+      <ul ng-repeat="room in home.room">
+        <li class="sidebar-room-name" ng-click="home.setCurrentRoom(room)">{{ room.$value }}</li>
+      </ul>
+    </div>
+  </section>
 
-
-  <!-- List of rooms -->
-  <div>
-    <ul class="room-list" ng-repeat="room in home.room">
-      <li>{{ room.$value }}</li>
-    </ul>
-  </div>
+<!-- Chatroom Section: displays the room that has been selected from the room list as a header and lists the messages associated with that room.  -->
+<section class="chatroom-section">
+  <h2>{{ home.currentRoom.$value }}</h2>
+  <p>insert room's messages here</p>
 </section>
