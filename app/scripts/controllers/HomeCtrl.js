@@ -10,7 +10,6 @@
       home.currentRoom = room;
       // Need to query the messages associated with roomID during the setCurrentRoom function so that when I ng-click on the room, the room name AND the message details appear.
       home.messages = Message.getByRoomId(home.currentRoom.$id);
-      console.log(room)
     }
   }
 
