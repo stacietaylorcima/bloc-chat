@@ -43,4 +43,8 @@ h1 {
 .chatroom-section{
   float: right;
   width: 75%;
+  margin: 5px;
+  padding: 25px;
+  border: 1px solid #9A9B9C;
+  border-radius: 5px;
 }
