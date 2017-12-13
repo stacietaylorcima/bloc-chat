@@ -18,9 +18,9 @@
 <!-- Chatroom Section: displays the room that has been selected from the room list as a header and lists the messages associated with that room.  -->
 <section class="chatroom-section">
   <h2>{{ home.currentRoom.$value }}</h2>
-    <div class="messages-body" ng-repeat="message in home.messages">
-      <div class="username">{{ message.username }}</div>
-      <div class="timestamp">{{ message.sentAt }}</div>
-      <div class="user-message">{{ message.content }}</div>
-    </div>
+    <ul class="message-list" ng-repeat="message in home.messages">
+        <li class="timestamp">{{ message.sentAt }}</li>
+        <li class="username">{{ message.username }}</li>
+        <li class="message-content">{{ message.content }}</li>
+  </ul>
 </section>
