@@ -1,5 +1,9 @@
 /*General styles*/
 
+* {
+  box-sizing: border-box;
+}
+
 html {
     font-size: 100%;
 }
@@ -15,7 +19,7 @@ html {
 .sidebar {
     position: absolute;
     float: left;
-    width: 21%;
+    width: 25%;
     height: 100%;
     background-color: #DEDEDE;
 }
@@ -39,11 +43,13 @@ html {
 
 /*Chatroom Section*/
 
+.chatroom-section h2 {
+  padding-left: 27px;
+}
+
 .chatroom-section {
   float: right;
   width: 75%;
-  margin: 5px;
-  padding: 5px 25px;
 }
 
 .message-list {
@@ -51,6 +57,10 @@ html {
   margin-left: 0;
   padding: 12px;
   background-color: #FFFFFF;
+}
+
+ul.message-list {
+  margin: 0;
 }
 
 .message-list li {
