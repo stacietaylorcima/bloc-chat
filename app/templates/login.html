@@ -1,0 +1,15 @@
+<div>
+  <div class="modal-header">
+    <h2 class="modal-title">Bloc Chat Log In</h2>
+  </div>
+  <div class="modal-body">
+    <p>Enter a username</p>
+    <form name="login" ng-submit="login.ok()">
+      <input class="form-control" ng-model="login.something" title="username" placeholder="username" autofocus />
+    </form>
+  </div>
+  <div class="modal-footer">
+    <!-- When this 'create' button is clicked within this modal, the ___() method is triggered in the ___Ctrl. -->
+    <button class="btn btn-primary" type="button" ng-click="login.ok(login.something)">Submit</button>
+  </div>
+</div>
