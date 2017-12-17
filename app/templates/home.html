@@ -5,7 +5,7 @@
     <!-- Need to reference ModalCtrl here because it is listening for a click on the 'New room' button.  -->
     <!-- When the 'New room' button is clicked, ModalCtrl calls the open() method on ModalCtrl which uses $uibModal services open() method to open the actual modal view (modal.html) -->
     <span ng-controller='ModalCtrl as modals'>
-      <button class='new-room-button' type='button' ng-click='modals.open()'>New room</button>
+      <button type='button' class='btn btn-primary' id='new-room-button' ng-click='modals.open()'>New room</button>
     </span>
     <!-- List of rooms -->
     <div class="room-list">
