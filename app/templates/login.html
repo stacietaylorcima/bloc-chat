@@ -1,7 +1,7 @@
 <!-- This is the modal that pops up when the app loads (per the run() block in BlocChatCookies.js) that promts a user to enter a username, then stores that username in a cookie and closes the modal.  -->
 <div>
   <div class="modal-header">
-    <h2 class="modal-title">Bloc Chat Login</h2>
+    <h2 class="modal-title">Welcome to Bloc Chat!</h2>
   </div>
   <div class="modal-body">
     <p>Enter a username</p>
@@ -12,6 +12,6 @@
   </div>
   <div class="modal-footer">
     <!-- When this 'submit' button is clicked within this modal, the ok() method is triggered in the LoginCtrl - which will write and store the username in a cookie and close the modal. -->
-    <button class="btn btn-primary" type="button" ng-click="login.ok(login.username)">Submit</button>
+    <button class="btn btn-primary" type="button" ng-click="login.ok(login.username)" ng-disabled="!login.username">Submit</button>
   </div>
 </div>
