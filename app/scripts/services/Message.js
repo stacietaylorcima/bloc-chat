@@ -1,5 +1,5 @@
 (function() {
-  function Message($firebaseArray) {
+  function Message($firebaseArray, $cookies) {
     var Message = {};
     var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
@@ -11,7 +11,7 @@
       return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
     };
 
-    Message.send = function(newMessage) {
+    Message.send = function(myMessage) {
       // this method takes a message object as an argument and submits it to the Firebase server
       // this method also associates the messaage with the current user's username (inputs current username in the username property of the database message object) by injecting the $cookies service and referencing the user object
     };
@@ -21,5 +21,5 @@
 
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', Message]);
+    .factory('Message', ['$firebaseArray', '$cookies', Message]);
 })();
