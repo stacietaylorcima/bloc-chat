@@ -11,11 +11,25 @@
       return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
     };
 
-    Message.send = function(myMessage) {
-      console.log(myMessage);
-      // this method takes a message object as an argument and submits it to the Firebase server
-      // this method also associates the messaage with the current user's username (inputs current username in the username property of the database message object) by injecting the $cookies service and referencing the user object
-    };
+    // this method takes a message object as an argument and submits it to the Firebase server
+    // this method also associates the messaage with the current user's username (inputs current username in the username property of the database message object) by injecting the $cookies service and referencing the user object
+
+    Message.send = function(content, roomId) {
+      var newMessageObject = {
+        sentAt: new Date().toDateString get curernt time native javascript timestamp method,
+        username: $cookies.get('blocChatCurrentUser'),
+        content: content,
+        roomId: roomId
+      };
+
+      // Room.add = function(room){
+      //   var roomList = $firebaseArray(ref);
+      //   roomList.$add(room);
+      // }; do something like This
+
+      console.log(content, roomId);
+     };
+
 
     return Message;
   }

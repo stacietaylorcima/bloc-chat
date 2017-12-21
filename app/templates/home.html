@@ -27,12 +27,12 @@
   <!-- New Message Section -->
     <div class="new-message">
       <!-- New Message Text Field  -->
-      <form name="new-message-form" ng-submit="home.sendMessage(home.myMessage)">
-        <input class="form-control" ng-model="home.myMessage" title="myMessage" placeholder="enter new message here" autofocus />
+      <form name="new-message-form" ng-submit="home.sendMessage(content)">
+        <input class="form-control" ng-model="content" title="content" placeholder="enter new message here" autofocus />
       </form>
       <!-- Send Message Button -->
       <div class="send-message-button">
-        <button class="btn btn-primary" type="button" ng-click="home.sendMessage(home.myMessage)" ng-disabled="!home.myMessage">Send</button>
+        <button class="btn btn-primary" type="button" ng-click="home.sendMessage(content)" ng-disabled="!myMessage">Send</button>
       </div>
     </div>
 </section>
