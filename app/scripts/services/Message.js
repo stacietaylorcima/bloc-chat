@@ -16,18 +16,20 @@
 
     Message.send = function(content, roomId) {
       var newMessageObject = {
-        sentAt: new Date().toDateString get curernt time native javascript timestamp method,
+        sentAt: Date.now(),
+        // Other notes: new Date().toDateString get curernt time native javascript timestamp method,
         username: $cookies.get('blocChatCurrentUser'),
         content: content,
         roomId: roomId
       };
 
+      // Format this functionality to send messages to firebase instead of rooms
       // Room.add = function(room){
       //   var roomList = $firebaseArray(ref);
       //   roomList.$add(room);
       // }; do something like This
 
-      console.log(content, roomId);
+      console.log(newMessageObject);
      };
 
 
