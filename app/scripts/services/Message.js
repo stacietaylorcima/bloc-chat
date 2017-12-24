@@ -1,5 +1,5 @@
 (function() {
-  function Message($firebaseArray, $cookies) {
+  function Message($firebaseArray, $cookies, $filter) {
     var Message = {};
     var ref = firebase.database().ref().child("messages");
     var messages = $firebaseArray(ref);
@@ -15,16 +15,16 @@
     // this method also associates the messaage with the current user's username (inputs current username in the username property of the database message object) by injecting the $cookies service and referencing the user object
 
     Message.send = function(content, roomId) {
+      var date = new Date();
       var newMessageObject = {
-        sentAt: Date.now(),
-        // Other notes: new Date().toDateString need to reflect a formatted time on view
+        sentAt: $filter('date')(date, 'shortTime'),
         username: $cookies.get('blocChatCurrentUser'),
         content: content,
         roomId: roomId
       };
+
       var messageList = $firebaseArray(ref);
       messageList.$add(newMessageObject);
-
       console.log(newMessageObject);
   };
 
@@ -34,5 +34,5 @@
 
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', '$cookies', Message]);
+    .factory('Message', ['$firebaseArray', '$cookies', '$filter', Message]);
 })();
