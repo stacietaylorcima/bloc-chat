@@ -75,3 +75,23 @@ ul.message-list {
 .username {
   font-weight: bold;
 }
+
+/* New Message Form  */
+
+.new-message {
+  padding: 25px;
+  width: 100%;
+}
+
+form {
+  display: inline-block;
+  width: 90%;
+}
+
+form input {
+  width: 90%;
+}
+
+.send-message-button {
+  float: right;
+}
