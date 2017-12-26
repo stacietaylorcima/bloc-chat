@@ -83,16 +83,25 @@ ul.message-list {
   width: 100%;
 }
 
-/* form {
-  display: inline-block;
-  width: 90%;
-} */
-
-form input {
+.new-message-form input {
   width: 90%;
 }
 
 .send-message-button {
   float: right;
   width: 8%;
+}
+
+/* Login Modal */
+
+.require-username input {
+  width: 100%;
+}
+
+.sign-up-link {
+  float: left;
+}
+
+.modal-footer button{
+  float: right;
 }

@@ -4,14 +4,16 @@
     <h2 class="modal-title">Welcome to Bloc Chat!</h2>
   </div>
   <div class="modal-body">
-    <p>Enter a username</p>
+    <p>Log in</p>
     <form name="require-username" ng-submit="login.ok(login.username)">
       <input class="form-control" ng-model="login.username" title="username" placeholder="username" autofocus />
-      <h3>{{login.username}}
+      <input class="form-control" ng-model="login.password" title="password" placeholder="password" autofocus />
+
     </form>
   </div>
   <div class="modal-footer">
     <!-- When this 'submit' button is clicked within this modal, the ok() method is triggered in the LoginCtrl - which will write and store the username in a cookie and close the modal. -->
+    <span class="sign-up-link">New to Bloc Chat? Create an account!</span>
     <button class="btn btn-primary" type="button" ng-click="login.ok(login.username)" ng-disabled="!login.username">Submit</button>
   </div>
 </div>
