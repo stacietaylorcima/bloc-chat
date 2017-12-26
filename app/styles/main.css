@@ -83,10 +83,10 @@ ul.message-list {
   width: 100%;
 }
 
-form {
+/* form {
   display: inline-block;
   width: 90%;
-}
+} */
 
 form input {
   width: 90%;
@@ -94,4 +94,5 @@ form input {
 
 .send-message-button {
   float: right;
+  width: 8%;
 }
