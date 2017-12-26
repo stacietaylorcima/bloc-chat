@@ -26,7 +26,6 @@
 
   <!-- New Message Section -->
     <div class="new-message" ng-hide="!home.currentRoom">
-    <!-- add an ng-hide="!currentRoom" to the div above -->
       <!-- New Message Text Field  -->
       <form name="new-message-form" ng-submit="home.sendMessage(content)">
         <input class="form-control" id="new-content-field" ng-model="content" title="content" placeholder="enter new message here" autofocus />
