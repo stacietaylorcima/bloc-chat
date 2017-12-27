@@ -17,7 +17,7 @@
               .state('signup', {
                 url: '/signup',
                 controller: 'AuthenticateUsers as authenticate',
-                templateUrl: '/pages/sign-up.html'
+                templateUrl: '/templates/sign-up.html'
               });
             }
 
