@@ -12,6 +12,12 @@
                   url: '/',
                   controller: 'HomeCtrl as home',
                   templateUrl: '/templates/home.html'
+              })
+
+              .state('signup', {
+                url: '/signup',
+                controller: 'AuthenticateUsers as authenticate',
+                templateUrl: '/pages/sign-up.html'
               });
             }
 
