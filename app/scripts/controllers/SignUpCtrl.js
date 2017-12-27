@@ -1,8 +1,8 @@
 (function(){
-  function SignUpCtrl(){
+  function SignUpCtrl($firebaseAuth, AuthenticateUsers){
   }
 
   angular
     .module('blocChat')
-    .controller('SignUpCtrl', [SignUpCtrl])
+    .controller('SignUpCtrl', '$firebaseAuth', 'AuthenticateUsers', [SignUpCtrl])
 })();

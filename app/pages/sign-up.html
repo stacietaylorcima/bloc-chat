@@ -4,9 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Sign up - Bloc Chat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css">
   <link rel="stylesheet" href="/styles/sign-up.css">
 </head>
 <body>
-  <p>Welcome to Bloc Chat! Enter your deets below to create a new account.</p>
+  <h1>Let's get started!</h1>
+    <p>Complete the form below to create a new Bloc Chat account.</p>
+
+
+    <form name="sign-up-form">
+      <h3>Username</h3>
+        <input class="form-control" ng-model="signup.username" title="username" placeholder="username" autofocus />
+      <h3>Email</h3>
+        <input class="form-control" ng-model="signup.email" title="email" placeholder="email" autofocus />
+      <h3>Password</h3>
+        <input class="form-control" ng-model="signup.password" title="password" placeholder="password" autofocus />
+      <button class="btn btn-primary" type="button" ng-disabled="!signup.username; !signup.email; !signup.password">Submit</button>
+    </form>
+
 </body>
 </html>
