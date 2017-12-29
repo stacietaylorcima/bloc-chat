@@ -12,7 +12,7 @@
   </div>
   <div class="modal-footer">
     <!-- When this 'submit' button is clicked within this modal, the ok() method is triggered in the LoginCtrl - which will write and store the username in a cookie and close the modal. -->
-      <span class="sign-up-link"><a href="/pages/sign-up.html">New to Bloc Chat? Create an account!</a></span>
+      <span class="sign-up-link"><a ui-sref="signup">New to Bloc Chat? Create an account!</a></span>
     <button class="btn btn-primary" type="button" ng-click="login.ok(login.username)" ng-disabled="!login.username">Submit</button>
   </div>
 </div>

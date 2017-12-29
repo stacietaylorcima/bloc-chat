@@ -28,7 +28,7 @@
       console.log(newMessageObject);
   };
 
-
+    // this.content = '';
     return Message;
   }
 
