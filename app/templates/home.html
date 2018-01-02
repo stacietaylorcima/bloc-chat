@@ -27,8 +27,8 @@
   <!-- New Message Section -->
     <div class="new-message" ng-hide="!home.currentRoom">
       <!-- New Message Text Field  -->
-      <form name="new-message-form" ng-submit="home.sendMessage(content)">
-        <input class="form-control" id="new-content-field" ng-model="content" title="content" placeholder="enter new message here" autofocus />
+      <form name="new-message-form" ng-submit="home.sendMessage(home.content)">
+        <input class="form-control" id="new-content-field" ng-model="home.content" title="content" placeholder="enter new message here" autofocus />
       <!-- Send Message Button -->
       <div class="send-message-button">
         <button class="btn btn-primary" type="button" ng-click="home.sendMessage(content)" ng-disabled="!content">Send</button>

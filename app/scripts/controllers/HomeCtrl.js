@@ -15,6 +15,7 @@
     home.sendMessage = function(content){
       // write code here that will accept the user's message and send it to the function in Message.js
       Message.send(content, home.currentRoom.$id);
+      home.content = '';
     }
 };
 
